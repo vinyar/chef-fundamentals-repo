@@ -10,4 +10,7 @@
 template "/etc/motd" do
   source "motd.erb"
   mode "0644"
+  user 'root'
+  group 'root'
+  action :create
 end

@@ -7,6 +7,6 @@
 # All rights reserved - Do Not Redistribute
 #
 
-package "mailx" do
+package node['mailx']['mailx-package'] do
   action :install
 end

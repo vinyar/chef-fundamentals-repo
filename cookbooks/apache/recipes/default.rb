@@ -32,13 +32,13 @@ service "httpd" do
 end
 
 ruby_block "randomly_choose_language" do
- block do
-   if Random.rand > 0.5
-     node.run_state['scripting_language'] = 'php'
-   else
-     node.run_state['scripting_language'] = 'perl'
-   end
- end
+  block do
+    if Random.rand > 0.5
+      node.run_state['scripting_language'] = 'php'
+    else
+      node.run_state['scripting_language'] = 'perl'
+    end
+  end
 end
 
 package "scripting_language" do
